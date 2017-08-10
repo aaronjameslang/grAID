@@ -1,0 +1,30 @@
+/*	Colour Scheme
+
+	Orange: #FF8000
+	Blue: #0000FF
+*/
+
+* {
+	margin:auto;
+	font-family:Ubuntu, Helvetica, sans-serif;
+	color:#000080
+}
+
+#uniLogoBar>* {
+	margin-left:49px;
+	margin-right:49px;
+}
+#navbar>div>a {
+	width:133px;
+	text-align:center;
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#navbar {
+	background-color:#4040FF;
+	border-radius:16px;
+	padding-top:4px;
+	padding-bottom:4px;
+}

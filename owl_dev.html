@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TITLE</title>
+		<meta name="author" content="Aaron J. Lang">
+		<!-- Cheat Sheet
+		<link rel="stylesheet" href="STYLESHEET.css" type="text/css">
+		<style type="text/css"></style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript"></script>
+		-->
+	</head>
+	<body>
+		<script type="text/javascript">
+			function circle(cx, cy, r, fill) {
+				return "<circle cx=\""+cx+"\" cy=\""+cy+"\" r=\""+r+"\" fill=\""+fill+"\"/>\n";
+			}
+			function sector(cx, cy, r, fill, angle1, angle2) {//angle here is a fraction, ie 1/2 = 180 degrees
+				radians1 = angle1*2*Math.PI;
+				radians2 = angle2*2*Math.PI;
+				x1 = cx+(r*Math.cos(radians1));
+				y1 = cy-(r*Math.sin(radians1));
+				x2 = cx+(r*Math.cos(radians2));
+				y2 = cy-(r*Math.sin(radians2));
+				return "<path d=\"M"+cx+","+cy+" L"+x1+","+y1+" A"+r+","+r+" 0 0,0 "+x2+","+y2+" z\" fill=\""+fill+"\"/>\n";
+			}
+			function rect(x, y, width, height, fill) {
+				return "<rect x=\""+x+"\" y=\""+y+"\" width=\""+width+"\" height=\""+height+"\" style=\"fill:"+fill+"\"/>\n"
+			}
+			function comment(s) {
+				return "<!--"+s+"-->\n";
+			}
+		</script>
+		<script type="text/javascript">			
+			BG_COLOUR = "#FF8000";
+			FG_COLOUR = "white";
+			
+			PHI = (Math.sqrt(5)+1)/2;//~1.6
+			
+			WIDTH = 800;
+			HEIGHT = WIDTH/PHI;
+		
+			body_r = HEIGHT/2;
+			body_cx = WIDTH/2;
+			body_cy = HEIGHT/2;
+			eye_R = body_r/(1+Math.sqrt(2));
+			eye_r = eye_R*0.9;
+			distanceBetweenEyes = eye_R*2*0.95;
+			left_eye_cx = body_cx-(distanceBetweenEyes/2);
+			right_eye_cx = body_cx+(distanceBetweenEyes/2);
+			eye_cy = body_cy-eye_R;
+			pupil_r = eye_r/4;
+			leg_R = body_r/2;
+			leg_r = leg_R*0.95;
+			
+		</script>
+		<script type="text/javascript">
+			svg = "";
+			
+			svg+="<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">\n";
+			
+			svg+=comment("background");
+			svg+=rect(0, 0, WIDTH, HEIGHT, BG_COLOUR);
+			svg+=comment("legs");
+			svg+=sector(body_cx, body_cy+body_r, leg_R, FG_COLOUR, 0, 1/2);
+			svg+=sector(body_cx, body_cy+body_r, leg_r, BG_COLOUR, 0, 1/2);
+			svg+=comment("body");
+			svg+=circle(body_cx, body_cy, body_r, FG_COLOUR);
+			svg+=comment("wings");
+			svg+=sector(body_cx-body_r, body_cy, body_r/2, FG_COLOUR, 3/16, 11/16);
+			svg+=sector(body_cx+body_r, body_cy, body_r/2, FG_COLOUR, 13/16, 5/16);
+			svg+=comment("nose");
+			svg+=circle(body_cx, body_cy, eye_R, BG_COLOUR);
+			svg+=circle(left_eye_cx, eye_cy+(2*eye_R), eye_R, FG_COLOUR);
+			svg+=circle(right_eye_cx, eye_cy+(2*eye_R), eye_R, FG_COLOUR);
+			svg+=comment("eyes");
+			svg+=circle(left_eye_cx, eye_cy, eye_R, BG_COLOUR);
+			svg+=circle(right_eye_cx, eye_cy, eye_R, BG_COLOUR);
+			svg+=circle(left_eye_cx, eye_cy, eye_r, FG_COLOUR);
+			svg+=circle(right_eye_cx, eye_cy, eye_r, FG_COLOUR);
+			svg+=circle(left_eye_cx, eye_cy, pupil_r, BG_COLOUR);
+			svg+=circle(right_eye_cx, eye_cy, pupil_r, BG_COLOUR);
+			
+			svg+="</svg>\n";
+			
+			document.write(svg);
+			//alert(svg);
+		</script>
+ 	</body>
+</html>

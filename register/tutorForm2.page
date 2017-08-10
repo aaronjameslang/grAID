@@ -1,0 +1,132 @@
+Tutor Form 2
+<h3>Tutor 2</h3>
+<form id="form_tutor2" onsubmit="form_tutor2_submit();">
+	<label for="form_tutor2_aLevelSubjects">Which subjects could you teach at Alevel in order of preference?</label>
+	<br/><input type="text" id="form_tutor2_aLevelSubject1"/>
+	<br/><input type="text" id="form_tutor2_aLevelSubject2"/>
+	<br/><input type="text" id="form_tutor2_aLevelSubject3"/>
+	<br/><input type="text" id="form_tutor2_aLevelSubject4"/>
+	<br/>
+	<label for="form_tutor2_gcseSubjects">Which subjects could you teach at GCSE in order of preference?</label>
+	<br/><input type="text" id="form_tutor2_gcseSubject1"/>
+	<br/><input type="text" id="form_tutor2_gcseSubject2"/>
+	<br/><input type="text" id="form_tutor2_gcseSubject3"/>
+	<br/><input type="text" id="form_tutor2_gcseSubject4"/>
+	<br/><input type="text" id="form_tutor2_gcseSubject5"/>
+	<br/><input type="text" id="form_tutor2_gcseSubject6"/>
+	<br/>
+	<label for="form_tutor2_ks3Subjects">Which subjects could you teach at KS3 in order of preference?</label>
+	<br/><input type="text" id="form_tutor2_ks3Subject1"/>
+	<br/><input type="text" id="form_tutor2_ks3Subject2"/>
+	<br/><input type="text" id="form_tutor2_ks3Subject3"/>
+	<br/><input type="text" id="form_tutor2_ks3Subject4"/>
+	<br/><input type="text" id="form_tutor2_ks3Subject5"/>
+	<br/><input type="text" id="form_tutor2_ks3Subject6"/>
+	<br/>
+	<label for="form_tutor2_levelPrefs">Which level would you prefer to teach: KS3, GCSE, Alevel, in order of preference?</label>
+	<br/>
+	<select id="form_tutor2_levelPref1">
+		<option value="3">KS3, Years 7-9, SATs</option>
+		<option value="4">KS4, Years 10-11, GCSEs</option>
+		<option value="5">KS5, Years 12-13, A Levels</option>
+	</select>
+	<br/>
+	<br/>
+	<select id="form_tutor2_levelPref2">
+		<option value="3">KS3, Years 7-9, SATs</option>
+		<option value="4">KS4, Years 10-11, GCSEs</option>
+		<option value="5">KS5, Years 12-13, A Levels</option>
+	</select>
+	<br/>
+	<br/>
+	<select id="form_tutor2_levelPref3">
+		<option value="3">KS3, Years 7-9, SATs</option>
+		<option value="4">KS4, Years 10-11, GCSEs</option>
+		<option value="5">KS5, Years 12-13, A Levels</option>
+	</select>
+	<br/>
+	<label for="form_tutor2_availibility">Which days and times would you be available to provide 1 hour tuition per week (remembering time to travel to/from the school)?</label>
+	<br/>
+	<table>
+		<tr>
+			<td>Ø</td>
+			<td>09:00-10:00</td>
+			<td>10:00-11:00</td>
+			<td>11:00-12:00</td>
+			<td>12:00-13:00</td>
+			<td>13:00-14:00</td>
+			<td>14:00-15:00</td>
+			<td>15:00-16:00</td>
+		</tr>
+		<tr>
+			<td>Monday</td>
+			<td><input type="checkbox" value="mon09"/></td>
+			<td><input type="checkbox" value="mon10"/></td>
+			<td><input type="checkbox" value="mon11"/></td>
+			<td><input type="checkbox" value="mon12"/></td>
+			<td><input type="checkbox" value="mon13"/></td>
+			<td><input type="checkbox" value="mon14"/></td>
+			<td><input type="checkbox" value="mon15"/></td>
+		</tr>
+		<tr>
+			<td>Tuesday</td>
+			<td><input type="checkbox" value="tue09"/></td>
+			<td><input type="checkbox" value="tue10"/></td>
+			<td><input type="checkbox" value="tue11"/></td>
+			<td><input type="checkbox" value="tue12"/></td>
+			<td><input type="checkbox" value="tue13"/></td>
+			<td><input type="checkbox" value="tue14"/></td>
+			<td><input type="checkbox" value="tue15"/></td>
+		</tr>
+		<tr>
+			<td>Wednesday</td>
+			<td><input type="checkbox" value="wed09"/></td>
+			<td><input type="checkbox" value="wed10"/></td>
+			<td><input type="checkbox" value="wed11"/></td>
+			<td><input type="checkbox" value="wed12"/></td>
+			<td><input type="checkbox" value="wed13"/></td>
+			<td><input type="checkbox" value="wed14"/></td>
+			<td><input type="checkbox" value="wed15"/></td>
+		</tr>
+		<tr>
+			<td>Thursday</td>
+			<td><input type="checkbox" value="thu09"/></td>
+			<td><input type="checkbox" value="thu10"/></td>
+			<td><input type="checkbox" value="thu11"/></td>
+			<td><input type="checkbox" value="thu12"/></td>
+			<td><input type="checkbox" value="thu13"/></td>
+			<td><input type="checkbox" value="thu14"/></td>
+			<td><input type="checkbox" value="thu15"/></td>
+		</tr>
+		<tr>
+			<td>Friday</td>
+			<td><input type="checkbox" value="fri09"/></td>
+			<td><input type="checkbox" value="fri10"/></td>
+			<td><input type="checkbox" value="fri11"/></td>
+			<td><input type="checkbox" value="fri12"/></td>
+			<td><input type="checkbox" value="fri13"/></td>
+			<td><input type="checkbox" value="fri14"/></td>
+			<td><input type="checkbox" value="fri15"/></td>
+		</tr>
+	</table>
+	<br/>
+	<label for="form_tutor2_crbYesNo">Do you currently have a CRB from either your university or your university's student union which continues to be in date for at least one year from this September?</label>
+	<select id="form_tutor2_crbYesNo">
+		<option value="y">Yes</option>
+		<option value="n">No</option>
+	</select>
+	<br/>
+	<label for="form_tutor2_crbNumber">If yes, please provide your CRB number here</label>
+	<input type="text" id="form_tutor2_crbNumber"/><!--Numer?-->
+	<br/>
+	<label for="form_tutor2_prevExp">Have you had any previous experience of tutoring school pupils/young adults?</label>
+	<select id="form_tutor2_prevExp">
+		<option value="y">Yes</option>
+		<option value="n">No</option>
+	</select>
+	<br/>
+	<label for="form_tutor2_prevExpDetails">If yes, please specify</label>
+	<input type="text" id="form_tutor2_prevExpDetails"/>
+	<br/>
+	<input type="submit" value="Submit"/>
+</form>
